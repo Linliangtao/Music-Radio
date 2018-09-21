@@ -2,74 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music Radio</title>
+    <meta name="referrer" content="never">
+    <title>Radio</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_448304_47new50n1nabgldi.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+    <script src="//at.alicdn.com/t/font_793057_3ocpq1zlrej.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-        <section id="page-music">
-                <main class="layout">
-                  <div class="aside">
-                    <figure></figure>
-                    <div class="actions">
-                      <span class="btn-collect iconfont icon-heart"></span>
-                      <span class="btn-play iconfont icon-pause"></span>
-                      <span class="btn-next iconfont icon-next"></span>
-                    </div>
-                  </div>
-                  <div class="detail">
-                    <span class="tag">90后</span>
-                    <h1>All is well</h1>
-                    <ul class="icons">
-                      <li><span class="iconfont icon-earphone"></span>12580</li>
-                      <li><span class="iconfont icon-heart"></span>1314</li>
-                      <li><span class="iconfont icon-like"> </span>520</li>
-                    </ul>
-                    <div class="area-bar">
-                      <div class="bar">
+    <!-- 当前页面 -->
+    <section id="page-music">
+        <main class="layout clearfix">
+            <div class="aside">
+                <figure></figure>
+                <div class="actions">
+                    <svg class="icon btn-heart" aria-hidden="true">
+                        <use xlink:href="#icon-heart1"></use>
+                    </svg>
+                    <svg class="icon btn-pause" aria-hidden="true">
+                        <use xlink:href="#icon-pause"></use>
+                    </svg>
+                    <svg class="icon btn-play none" aria-hidden="true">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                    <svg class="icon btn-next" aria-hidden="true">
+                        <use xlink:href="#icon-next-song"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="detail">
+                <span class="tag">随机播放</span>
+                <h1></h1>
+                <ul class="icons">
+                    <li><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-headphones"></use>
+                    </svg>333</li>
+                    <li><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-heart"></use>
+                    </svg>222</li>
+                    <li><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-like"></use>
+                    </svg>111</li>
+                </ul>
+                <div class="area-bar">
+                    <div class="bar">
                         <div class="bar-progress"></div>
-                      </div>
-                      <div class="current-time">1:02</div>
                     </div>
-                    <div class="author">林俊杰</div>
-                    <div class="lyric">
-                      <p>Hello Everyone</p>
-                    </div>
-                  </div>
-                </main>
-                <footer>
-                  <div class="layout">
-                    <span class="iconfont icon-left"></span>
-                    <span class="iconfont icon-right"></span>
-                    <div class="box">
-                       <ul>
-                         <li>
-                          <div class="cover" style="background-image:url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-small)"></div>
-                           <h3>漫步春天</h3>
-                         </li>
-                         <li>
-                          <div class="cover" style="background-image:url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-small)"></div>
-                           <h3>漫步春天</h3>
-                         </li>
-                         <li>
-                          <div class="cover" style="background-image:url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-small)"></div>
-                           <h3>漫步春天</h3>
-                         </li>
-                         <li>
-                          <div class="cover" style="background-image:url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-small)"></div>
-                           <h3>漫步春天</h3>
-                         </li>
-                       </ul> 
-                    </div>        
-                  </div>
-            
-                </footer>
-              </section>
-              <section id="page-cover"></section>
-              <div class="bg"></div>                
+                    <div class="current-time">0:00</div>
+                </div>
+                <div class="author"></div>
+                <div class="lyric">
+                    <p></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="layout">
+                <svg class="icon left" aria-hidden="true">
+                    <use xlink:href="#icon-left"></use>
+                </svg>
+                <svg class="icon right" aria-hidden="true">
+                    <use xlink:href="#icon-right"></use>
+                 </svg>
+                <div class="box">
+                    <!-- JS动态生成li -->
+                    <ul class="clearfix">
+                        <li data-channel-id='mylove' 
+                            data-channel-name='MyLove'>
+                            <div class="cover"  
+                            style="background:url(./img/love.jpg) center center no-repeat; background-size: cover;"></div>
+                            <h3>我的喜爱</h3>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </section>
+   
+    <script src="./js/main.js"></script>
 </body>
 </html>

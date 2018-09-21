@@ -120,38 +120,7 @@
             this.loadMusic()                                    
         },
         bind: function() {
-            var _this = this
-            EventCenter.on('select-albumn', (e, channelObj) => {
-                if (channelObj.channelId === 'mylove') {
-                    if (this.loves !== null && !$.isEmptyObject(this.loves)) {
-                        this.channelId = channelObj.channelId
-                        this.channelName = channelObj.channelName
-                        $('.btn-heart').addClass('like')
-                        this.loadMusic()
-                    }  
-                } else {
-                    this.channelId = channelObj.channelId
-                    this.channelName = channelObj.channelName
-                    $('.btn-heart').removeClass('like')
-                    this.loadMusic()
-                }  
-            })
-            $('.btn-heart').on('click', () => {
-                console.log(this.song)
-                if (this.loves === null) {
-                    this.loves = {}
-                }
-                if (this.loves.hasOwnProperty(this.song.sid)) {
-                    delete this.loves[this.song.sid]
-                    var data = JSON.stringify(this.loves)
-                    window.localStorage.setItem('Loves', data)
-                } else {
-                    this.loves[this.song.sid] = this.song
-                    var data = JSON.stringify(this.loves)     
-                    window.localStorage.setItem('Loves', data)
-                }
-                $('.btn-heart').toggleClass('like')
-            })
+            
             $('.btn-play').on('click', () => {
                 $('.btn-play').addClass('none')
                 $('.btn-pause').removeClass('none')
